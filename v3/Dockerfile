@@ -4,7 +4,7 @@ RUN echo 'hello' \
 && mkdir /datas 
 WORKDIR /datas
 Volume /datas
-COPY ./ ./
-RUN ls -R && cp -r $WHICH/my.cnf /etc/my.cnf
+COPY master ./
+COPY slave ./
 EXPOSE 3336
 CMD bash
