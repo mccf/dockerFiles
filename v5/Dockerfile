@@ -6,3 +6,4 @@ WORKDIR /datas
 Volume /datas
 COPY ./ ./
 EXPOSE 3336
+CMD mysqld

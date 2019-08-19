@@ -1,8 +1,6 @@
 FROM mysql:5.6
 ENV WHICH="master" "MYSQL_ROOT_PASSWORD"="mysqlmM"
-RUN echo 'hello' \
-&& mkdir /datas 
-WORKDIR /datas
+RUN echo 'hello' 
 Volume /datas
-COPY ./ ./
-EXPOSE 3336
+EXPOSE 3337
+CMD mysqld
