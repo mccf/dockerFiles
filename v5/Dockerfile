@@ -1,10 +1,9 @@
 FROM mysql:5.6
-ENV WHICH="master"
+ENV WHICH="master" "MYSQL_ROOT_PASSWORD"="mysqlmM"
 RUN echo 'hello' \
 && mkdir /datas 
 WORKDIR /datas
 Volume /datas
-COPY master ./
-COPY slave ./
+COPY ./ ./
 EXPOSE 3336
-CMD bash
+CMD mysqld
